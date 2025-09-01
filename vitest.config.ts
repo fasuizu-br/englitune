@@ -1,0 +1,21 @@
+import { configDefaults, defineConfig, mergeConfig } from "vitest/config";
+import viteConfig from "./vite.config";
+
+export default mergeConfig(
+  viteConfig,
+  defineConfig({
+    test: {
+      exclude: [...configDefaults.exclude, "e2e"],
+      coverage: {
+        reporter: ["text"],
+        include: ["src/lib/studyUtils.ts"],
+        thresholds: {
+          statements: 100,
+          branches: 100,
+          functions: 100,
+          lines: 100
+        }
+      }
+    }
+  })
+);

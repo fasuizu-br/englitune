@@ -1,0 +1,14 @@
+# macOS system files
+.DS_Store
+**/.DS_Store
+
+# Source maps (not needed in production)
+*.map
+**/*.map
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
